@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/KIDS24-team19-pages/static/css/main.4c1630aa.css",
-    "main.js": "/KIDS24-team19-pages/static/js/main.219d5810.js",
+    "main.css": "/KIDS24-team19-pages/static/css/main.96d7337e.css",
+    "main.js": "/KIDS24-team19-pages/static/js/main.cd4fbd31.js",
     "static/js/453.0400443a.chunk.js": "/KIDS24-team19-pages/static/js/453.0400443a.chunk.js",
     "static/media/image.png": "/KIDS24-team19-pages/static/media/image.ab6e8ae24a5dc1dad845.png",
+    "static/media/pipeline.jpg": "/KIDS24-team19-pages/static/media/pipeline.da055d59ec934e4cffa2.jpg",
     "index.html": "/KIDS24-team19-pages/index.html",
-    "main.4c1630aa.css.map": "/KIDS24-team19-pages/static/css/main.4c1630aa.css.map",
-    "main.219d5810.js.map": "/KIDS24-team19-pages/static/js/main.219d5810.js.map",
+    "main.96d7337e.css.map": "/KIDS24-team19-pages/static/css/main.96d7337e.css.map",
+    "main.cd4fbd31.js.map": "/KIDS24-team19-pages/static/js/main.cd4fbd31.js.map",
     "453.0400443a.chunk.js.map": "/KIDS24-team19-pages/static/js/453.0400443a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c1630aa.css",
-    "static/js/main.219d5810.js"
+    "static/css/main.96d7337e.css",
+    "static/js/main.cd4fbd31.js"
   ]
 }
