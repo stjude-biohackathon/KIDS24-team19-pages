@@ -61,9 +61,7 @@ const Navbar = () => {
                               onClick={() => setActiveLink('/')}
                             >S3 Files</NavLink>
                         </li>
-                       {/*<li className="nav-item">
-                            <NavLink to="/visualize-output" className="nav-link text-gray-800 hover:text-blue-600" activeClassName="active text-blue-600">Visualize Output</NavLink>
-                        </li>*/}
+                    
                         </ul>
                     </div>
                 </div>

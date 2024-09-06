@@ -75,9 +75,7 @@ function ConfigForm() {
       }
     };
     
-    // Assume `validateForm` function exists and returns an object of errors
-    // If `newErrors` was supposed to be used, it has been replaced with `validationErrors` for consistency.
-    
+
   
 
       // Logic to generate the text file based on formData
@@ -108,12 +106,21 @@ function ConfigForm() {
     
   
   return (
+    
      
-          <div className="container">
+          <div className="container mt-4 pl-7 pr-7 p-5 bg-light rounded shadow-lg">
             <h2 className= "text-4xl sm:text-6xl lg:text-6xl text-center tracking-wide pt-7 pb-3">Config Form</h2>
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="controlCountPrefix" className="mb-3">
-                <Form.Label>Control Count Prefix</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Control Count Prefix</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="controlCountPrefix"
@@ -122,12 +129,7 @@ function ConfigForm() {
                   isInvalid={!!errors.controlCountPrefix}
                 />
     
-                 <div
-                 className="text-blue-500 ml-2 cursor-pointer"
-                 onClick={() => handleShowModal("This is where you input....")}
-                 >
-                   ?
-               </div>
+                 
                {/* Modal */}
        <Modal show={show} onHide={handleShowModal}>
       
@@ -144,7 +146,7 @@ function ConfigForm() {
                 <div className='flex justify-between items-center w-full'> 
                  <Form.Label>Control Count Suffix</Form.Label>
                  <span
-                   className="text-red-900  ml-2 cursor-pointer"
+                   className="text-red-800  ml-2 cursor-pointer"
                    onClick={() => handleShowModal("This is where you input....")}
                   >
                     ?
@@ -161,7 +163,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="controlAnnoPrefix" className="mb-3">
-                <Form.Label>Control Annotation Prefix</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Control Annotation Prefix</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="controlAnnoPrefix"
@@ -169,16 +179,18 @@ function ConfigForm() {
                   onChange={handleChange}
                   isInvalid={!!errors.controlAnnoPrefix}
                 />
-                <span
-                 className="text-blue-500 ml-2 cursor-pointer"
-                 onClick={() => handleShowModal("This is where you input....")}
-                 >
-                   ?
-               </span>
               </Form.Group>
   
               <Form.Group controlId="controlAnnoSuffix" className="mb-3">
-                <Form.Label>Control Annotation Suffix</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Control Annotation Suffix</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="controlAnnoSuffix"
@@ -186,16 +198,18 @@ function ConfigForm() {
                   onChange={handleChange}
                   isInvalid={!!errors.controlAnnoSuffix}
                 />
-                <span
-                 className="text-blue-500 ml-2 cursor-pointer"
-                 onClick={() => handleShowModal("This is where you input....")}
-                 >
-                   ?
-               </span>
               </Form.Group>
   
               <Form.Group controlId="loadingPath" className="mb-3">
-                <Form.Label>Loading Path</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Loading Path</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="loadingPath"
@@ -203,16 +217,18 @@ function ConfigForm() {
                   onChange={handleChange}
                   isInvalid={!!errors.loadingPath}
                 />
-                <span
-                 className="text-blue-500 ml-2 cursor-pointer"
-                 onClick={handleShowModal}
-                 >
-                   ?
-               </span>
               </Form.Group>
   
               <Form.Group controlId="rfModelPath" className="mb-3">
-                <Form.Label>RF Model Path</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>RF Model Path</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="rfModelPath"
@@ -220,16 +236,18 @@ function ConfigForm() {
                   onChange={handleChange}
                   isInvalid={!!errors.rfModelPath}
                 />
-                <span
-                 className="text-blue-500 ml-2 cursor-pointer"
-                 onClick={() => handleShowModal("This is where you input....")}
-                 >
-                   ?
-               </span>
               </Form.Group>
   
               <Form.Group controlId="threshold" className="mb-3">
-                <Form.Label>Threshold</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Threshold</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   as="select"
                   name="threshold"
@@ -243,7 +261,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="caseBed" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Case Bed</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                 </div>
                 <Form.Control
                   type="text"
                   name="caseBed"
@@ -255,7 +281,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="caseVCFPrefix" className="mb-3">
-                <Form.Label>Case VCF Prefix</Form.Label>
+              <div className='flex justify-between items-center w-full'> 
+                 <Form.Label>Case VCF Prefix</Form.Label>
+                 <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="caseVCFPrefix"
@@ -266,7 +300,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="caseVCFSuffix" className="mb-3">
+                <div className='flex justify-between items-center w-full'>
                 <Form.Label>Case VCF Suffix</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="caseVCFSuffix"
@@ -277,7 +319,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="caseSample" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Case Sample</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="caseSample"
@@ -288,7 +338,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="outputRoot" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Output Root</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="outputRoot"
@@ -299,7 +357,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="annovarFolder" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Annovar Folder</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="annovarFolder"
@@ -310,7 +376,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="CoCoRVFolder" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>CoCoRV Folder</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="CoCoRVFolder"
@@ -321,7 +395,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="refFASTA" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Reference FASTA</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="refFASTA"
@@ -332,7 +414,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="build" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Build</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   as="select"
                   name="build"
@@ -346,7 +436,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="gnomADVersion" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>gnomAD Version</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   as="select"
                   name="gnomADVersion"
@@ -361,7 +459,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="chrSet" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>Chromosome Set</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="chrSet"
@@ -373,7 +479,15 @@ function ConfigForm() {
               </Form.Group>
   
               <Form.Group controlId="ACANConfig" className="mb-3">
+              <div className='flex justify-between items-center w-full'>
                 <Form.Label>ACAN Config</Form.Label>
+                <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                 <Form.Control
                   type="text"
                   name="ACANConfig"
@@ -384,7 +498,15 @@ function ConfigForm() {
                 </Form.Group>
                 
                 <Form.Group controlId = " variantExclude" className = "mb-4 col-span-full"> 
+                <div className='flex justify-between items-center w-full'>
                   <Form.Label>Variant Exclude</Form.Label>
+                  <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                   <Form.Control
                    type = "text"
                    name = "variantExclude"
@@ -394,7 +516,15 @@ function ConfigForm() {
                    />
                 </Form.Group>
                 <Form.Group controlId = "AFMax" className = "mb-4 col-span-full">
+                <div className='flex justify-between items-center w-full'>
                   <Form.Label> AFMax </Form.Label>
+                  <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                   <Form.Control
                    type = "number"
                    name = "AFMax"
@@ -404,7 +534,15 @@ function ConfigForm() {
                     />
                 </Form.Group>
                 <Form.Group controlId = "variantMissing" className = "mb-4 col-span-full">
+                <div className='flex justify-between items-center w-full'>
                   <Form.Label> variantMissing </Form.Label>
+                  <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                   <Form.Control
                    type = "number"
                    name = "variantMissing"
@@ -414,7 +552,15 @@ function ConfigForm() {
                     />
                 </Form.Group>
                 <Form.Group controlId = "variantGroup" className = "mb-4 col-span-full">
+                <div className='flex justify-between items-center w-full'>
                   <Form.Label> variantGroup </Form.Label>
+                  <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                   <Form.Control
                    type = "text"
                    name = "variantGroup"
@@ -424,7 +570,15 @@ function ConfigForm() {
                     />
                 </Form.Group>
                 <Form.Group controlId = "REVELThreshold" className = "mb-4 col-span-full">
+                <div className='flex justify-between items-center w-full'>
                   <Form.Label> REVELThreshold </Form.Label>
+                  <span
+                   className="text-red-800  ml-2 cursor-pointer"
+                   onClick={() => handleShowModal("This is where you input....")}
+                  >
+                    ?
+                 </span>
+                </div>
                   <Form.Control
                    type = "number"
                    name = "REVELThreshold"
